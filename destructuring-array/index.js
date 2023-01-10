@@ -18,15 +18,32 @@ const restaurant = {
 // const [x, y, z] = arr;
 // console.log(x, y, z);
 
-let [main, , secondary] = restaurant.categories;
-console.log(main, secondary);
+// let [main, , secondary] = restaurant.categories;
+// console.log(main, secondary);
 
-const temp = main;
-main = secondary;
-secondary = temp;
-console.log(main, secondary);
-// Đảo ngược sử dụng biến tạm thời
+// const temp = main;
+// main = secondary;
+// secondary = temp;
+// console.log(main, secondary);
+// // Đảo ngược sử dụng biến tạm thời
 
-// chuyển đổi biến
-[main, secondary] = [secondary, main];
-console.log(main, secondary);
+// // chuyển đổi biến
+// [main, secondary] = [secondary, main];
+// console.log(main, secondary);
+
+// Nhận 2 giá trị trả về từ một hàm
+const [starter, mainCourse] = restaurant.order(2, 0);
+console.log(starter, mainCourse);
+
+// lấy các giá trị khi mảng lông nhau
+const nested = [2, 3, [5, 6]];
+
+// const [i, , j] = nested;
+// console.log(i, j);
+
+const [i, , [j, k]] = nested;
+console.log(i, j, k);
+
+// giá trị mặc định
+const [p = 1, q = 1, r = 1] = [8, 9];
+console.log(p, q, r);
